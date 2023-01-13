@@ -1,8 +1,4 @@
 /*
-     Created by mohamed ahmed on 14/10/2022
-     Copyright © 2019 Dr Badariah. All rights reserved. (sample)
-     Date Created: 14/10/2022
- 
 Problem: Write a C++ program to calculate the final marks for a subject. There are three assessment types for the
 subject. Below are the percentages of the marks that will be taken into account for the Total Final Marks.
 
@@ -123,12 +119,6 @@ You failed the subject with a final mark of 47.7
       22.75          12.15    12.8   :     47.7
 
       You failed the subject with a final mark of 47.7
-
- I hereby declare that this C++ program is the result of
- my own work. No part of the program has been copied or
- altered from other student(s)or by other student(s)or from
- other sources such as books, Internet, etc.
-
  */
 
 #include <iostream>
@@ -180,12 +170,3 @@ float conv30(float x)
     x = x * 0.3;
     return x;
 }
-
-
-//BS-OK
-
-
-
-
-
-

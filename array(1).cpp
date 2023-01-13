@@ -1,8 +1,4 @@
 /*
-     Created by mohamed ahmed on 14/10/2022
-     Copyright © 2019 Dr Badariah. All rights reserved. (sample)
-     Date Created: 14/10/2022
- 
 Problem: Write a program to read four (4) Celsius and Fahrenheit degrees and displays a table of these
 degrees with their corresponding degrees Fahrenheit and Kelvin. Implement the program using
 1D array
@@ -102,13 +98,6 @@ h.hhh          z.zzzz
       167.000          423.150
       185.000          433.150
       ----------------------------------------
-      
-
- I hereby declare that this C++ program is the result of
- my own work. No part of the program has been copied or
- altered from other student(s)or by other student(s)or from
- other sources such as books, Internet, etc.
-
  */
 
 #include <iostream>
@@ -143,17 +132,3 @@ int main()
       
       return 0;
 }
-
-//BS-OK
-
-
-
-
-
-
-
-
-
-
-
-

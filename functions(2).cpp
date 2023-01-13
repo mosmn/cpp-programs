@@ -1,8 +1,4 @@
 /*
-     Created by mohamed ahmed on 14/10/2022
-     Copyright © 2019 Dr Badariah. All rights reserved. (sample)
-     Date Created: 14/10/2022
- 
 Problem: You are given 10 pieces of RM50 BB1M book voucher to purchase books. Currently, there are 3
 bookstores which doing promotion on usage of BB1M book voucher. Write a program to calculate the
 best value of voucher usage. Your program MUST validate the input of the voucher amount. For instance,
@@ -121,12 +117,6 @@ Voucher amount invalid
 
    2) input: 460
       output: Voucher amount invalid
-
- I hereby declare that this C++ program is the result of
- my own work. No part of the program has been copied or
- altered from other student(s)or by other student(s)or from
- other sources such as books, Internet, etc.
-
  */
 
 #include <iostream>
@@ -201,16 +191,3 @@ void getBestValue(float x, float y, float z)
       else
          cout << "Pupil gives the best voucher usage" << endl;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

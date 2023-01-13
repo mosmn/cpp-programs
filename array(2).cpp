@@ -1,8 +1,4 @@
 /*
-     Created by mohamed ahmed on 14/10/2022
-     Copyright © 2019 Dr Badariah. All rights reserved. (sample)
-     Date Created: 14/10/2022
- 
 Problem: Write a C++ program to perform the following:
 a. Ask user to determine the size of an array to store integer data.
 b. Declare the array, based on (a) and ask user to enter the integer data.
@@ -181,14 +177,6 @@ Result of operation X
       Enter the number to search: 6
       Number not found
       Enter your choice: 0
-
-
-
- I hereby declare that this C++ program is the result of
- my own work. No part of the program has been copied or
- altered from other student(s)or by other student(s)or from
- other sources such as books, Internet, etc.
-
  */
 
 #include <iostream>
@@ -340,18 +328,3 @@ void searchArray(int numbers[], int arraySize)
       cout << "Number not found" << endl;
    }
 }
-
-
-
-//BS-OK
-
-
-
-
-
-
-
-
-
-
-
