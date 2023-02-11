@@ -22,7 +22,7 @@ int main() {
 
         grossSalary = calculateSalary(hours, rate);
 
-        cout << "Salary is $" << fixed << setprecision(2) << grossSalary << endl;
+        cout << "Salary is $" << fixed << setprecision(2) << grossSalary << "\n\n";
     }
 
     return 0;
