@@ -26,7 +26,7 @@ int main() {
 }
 
 void FillArray (int *aPtr, int i){
-    cout << "enter 5 nums:";
+    cout << "enter 5 nums: ";
     for(int j=0; j<i; j++){
         cin >> *(aPtr+j);
     }

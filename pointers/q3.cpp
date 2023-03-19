@@ -66,5 +66,6 @@ int* unionArrays(int* arr1, int s1, int* arr2, int s2, int& sNew) {
 
     sNew = index;
 
+
     return newArr;
 }
