@@ -38,6 +38,5 @@ int main() {
     cout << "The average of the values in the array is " << sum / len << endl;
 
     delete [] ptr;
-
     return 0;
 }
