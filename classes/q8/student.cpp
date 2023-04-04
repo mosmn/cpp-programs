@@ -32,5 +32,5 @@ void Student::GetPointers()
 void Student::display() {
     cout << "Name: " << name << endl;
     cout << "GPA: " << calculateGPA(points, creditHour) << endl;
-}
+} 
   
