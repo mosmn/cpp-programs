@@ -1,0 +1,2 @@
+This is my first exercise on file stream.
+Hoorey! I managed to write this text into a file.
