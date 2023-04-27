@@ -21,3 +21,86 @@ include the following:
 private and public functions
 • Output formatting using input/ output manipulation
 */
+
+#include <iostream>  
+#include <iomanip>
+#include <string>
+using namespace std;
+
+class Member {
+private:
+    string name;
+    string dateJoined;
+    float weight;
+    int height;
+    float bmi;
+
+public:
+    Member(string name, string dateJoined, float weight, int height, float bmi) {
+        this->name = name;
+        this->dateJoined = dateJoined;
+        this->weight = weight;
+        this->height = height;
+        this->bmi = bmi;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    float getWeight() {
+        return weight;
+    }
+
+    int getHeight() {
+        return height;
+    }
+
+    float getBMI() {
+        return bmi;
+    }
+};
+
+void calculateHighestWeight(Member members[], int size) {
+    float highestWeight = members[0].getWeight();
+
+    for (int i = 1; i < size; i++) {
+        if (members[i].getWeight() > highestWeight) {
+            highestWeight = members[i].getWeight();
+        }
+    }
+
+    cout << setw(30) << left << "Highest weight: " << right << highestWeight << " kg" << endl;
+}
+
+void calculateLowestWeight(Member members[], int size) {
+    // Similar to calculateHighestWeight()
+}
+
+void calculateHighestBMI(Member members[], int size) {
+    // Similar to calculateHighestWeight()
+}   
+
+void calculateLowestBMI(Member members[], int size) {
+    // Similar to calculateHighestWeight()
+}   
+
+void calculateAverages(Member members[], int size) {
+    float totalWeight = 0;
+    float totalHeight = 0;
+    float totalBMI = 0;
+
+    for (int i = 0; i < size; i++) {
+        totalWeight += members[i].getWeight();
+        totalHeight += members[i].getHeight();
+        totalBMI += members[i].getBMI();
+    }
+
+    cout << setw(30) << left << "Average weight: " << right << totalWeight / size << " kg" << endl;
+    cout << setw(30) << left << "Average height: " << right << totalHeight / size << " cm" << endl; 
+    cout << setw(30) << left << "Average BMI: " << right << totalBMI / size << endl;
+}
+
+int main() {
+    // Similar to Question 1
+}
