@@ -9,59 +9,257 @@ Question 2:
 | ZRIYAB ABUBAKER MUSTAFA MOHAMED ALI   | SW01082419 |
 +---------------------------------------+------------+
 
-Question 2
-From your work in Question 1, using the same scenario, convert the programming technique
-from using just a structure to using class and object. In this question, you are REQUIRED to
-include the following:
-• Class
-• Private data members
-• Object array
-• Constructor
-• At least FOUR (4) user-defined functions to processed the data. Compulsory to have
-private and public functions
-• Output formatting using input/ output manipulation
-*/
 
-#include <iostream>  
-#include <iomanip>
-#include <string>
-using namespace std;
+Class:
+    class Member {
+        private:
+            string name;
+            string dateJoined;
+            float weight;
+            int height;
+            float bmi;
 
-class Member {
-private:
+            float calculateBMI() {
+                float heightInMeters = height / 100.0;
+                return weight / (heightInMeters * heightInMeters);
+            }
+        public:
+            Member(string name, string dateJoined, float weight, int height) {
+                this->name = name;
+                this->dateJoined = dateJoined;
+                this->weight = weight;
+                this->height = height;
+                bmi = calculateBMI();
+            }
+
+            string getName() {
+                return name;
+            }
+
+            string getDateJoined() {
+                return dateJoined;
+            }
+
+            float getWeight() {
+                return weight;
+            }
+
+            int getHeight() {
+                return height;
+            }
+
+            float getBMI() {
+                return bmi;
+            }
+
+            void setName(string name) {
+                this->name = name;
+            }
+
+            void setDateJoined(string dateJoined) {
+                this->dateJoined = dateJoined;
+            }
+
+            void setWeight(float weight) {
+                this->weight = weight;
+                this->bmi = calculateBMI();
+            }
+
+            void setHeight(int height) {
+                this->height = height;
+                this->bmi = calculateBMI();
+            }
+    };
+
+
+Private data members:
     string name;
     string dateJoined;
     float weight;
     int height;
     float bmi;
 
-public:
-    Member(string name, string dateJoined, float weight, int height, float bmi) {
+Object array:
+    Member gymMembers[5];
+
+Constructor:
+    Member(string name, string dateJoined, float weight, int height) {
         this->name = name;
         this->dateJoined = dateJoined;
         this->weight = weight;
         this->height = height;
-        this->bmi = bmi;
+        bmi = calculateBMI();
     }
 
-    string getName() {
-        return name;
-    }
+At least FOUR (4) user-defined functions to processed the data. Compulsory to have
+private and public functions:
+    User-defined functions:
+        float calculateHighestWeight(Member members[], int size);
+        float calculateLowestWeight(Member members[], int size);
+        float calculateHighestBMI(Member members[], int size);
+        float calculateLowestBMI(Member members[], int size);
+        void calculateAverages(Member members[], int size);
+    Private functions:
+        float calculateBMI() {
+            float heightInMeters = height / 100.0;
+            return weight / (heightInMeters * heightInMeters);
+        }
+    Public functions:
+        string getName() {
+            return name;
+        }
 
-    float getWeight() {
-        return weight;
-    }
+        string getDateJoined() {
+            return dateJoined;
+        }
 
-    int getHeight() {
-        return height;
-    }
+        float getWeight() {
+            return weight;
+        }
 
-    float getBMI() {
-        return bmi;
-    }
+        int getHeight() {
+            return height;
+        }
+
+        float getBMI() {
+            return bmi;
+        }
+
+        void setName(string name) {
+            this->name = name;
+        }
+
+        void setDateJoined(string dateJoined) {
+            this->dateJoined = dateJoined;
+        }
+
+        void setWeight(float weight) {
+            this->weight = weight;
+            this->bmi = calculateBMI();
+        }
+
+        void setHeight(int height) {
+            this->height = height;
+            this->bmi = calculateBMI();
+        }
+
+Output formatting:
+    Highest weight:               90 kg
+    Lowest weight:                65 kg
+    Highest BMI:                  29.4
+    Lowest BMI:                   23.9
+
+    Average weight:               79.0 kg
+    Average height:               175.0 cm
+    Average BMI:                  25.75
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+class Member {
+    private:
+        string name;
+        string dateJoined;
+        float weight;
+        int height;
+        float bmi;
+
+        float calculateBMI() {
+            float heightInMeters = height / 100.0;
+            return weight / (heightInMeters * heightInMeters);
+        }
+    public:
+        Member(string name, string dateJoined, float weight, int height) {
+            this->name = name;
+            this->dateJoined = dateJoined;
+            this->weight = weight;
+            this->height = height;
+            bmi = calculateBMI();
+            // When local variable’s name is same as member’s name (shadowing) use this-> to refer to the member, since the member is hidden by the local variable.
+            // alternatively, you can use a different name for the local variable. e.g.:
+            // Member(string n, string d, float w, int h) {
+            //     name = n;
+            //     dateJoined = d;
+            //     weight = w;
+            //     height = h;
+            //     bmi = calculateBMI();
+            // }
+        }
+
+        string getName() {
+            return name;
+        }
+
+        string getDateJoined() {
+            return dateJoined;
+        }
+
+        float getWeight() {
+            return weight;
+        }
+
+        int getHeight() {
+            return height;
+        }
+
+        float getBMI() {
+            return bmi;
+        }
+
+        void setName(string name) {
+            this->name = name;
+        }
+
+        void setDateJoined(string dateJoined) {
+            this->dateJoined = dateJoined;
+        }
+
+        void setWeight(float weight) {
+            this->weight = weight;
+            this->bmi = calculateBMI();
+        }
+
+        void setHeight(int height) {
+            this->height = height;
+            this->bmi = calculateBMI();
+        }
 };
 
-void calculateHighestWeight(Member members[], int size) {
+float calculateHighestWeight(Member members[], int size);
+float calculateLowestWeight(Member members[], int size);
+float calculateHighestBMI(Member members[], int size);
+float calculateLowestBMI(Member members[], int size);
+void calculateAverages(Member members[], int size);
+
+int main() {
+    Member gymMembers[5] = {
+        Member("John Smith", "01/01/2023", 80, 180),
+        Member("Sarah Lee", "02/01/2023", 65, 165),
+        Member("Mike Chen", "03/01/2023", 90, 175),
+        Member("Amy Wang", "04/01/2023", 75, 170),
+        Member("Tom Brown", "05/01/2023", 85, 185)
+    };
+
+    cout << "+-------------------------------------+" << endl
+        << setw(30) << right << "My Gym Members Report" << endl
+        << "+-------------------------------------+" << endl;
+
+    cout << setw(30) << left << "Highest weight: " << right << calculateHighestWeight(gymMembers, 5) << " kg" << endl;
+    cout << setw(30) << left << "Lowest weight: " << right << calculateLowestWeight(gymMembers, 5) << " kg" << endl;
+    cout << fixed << setprecision(1);
+    cout << setw(30) << left << "Highest BMI: " << right << calculateHighestBMI(gymMembers, 5) << endl;
+    cout << setw(30) << left << "Lowest BMI: " << right << calculateLowestBMI(gymMembers, 5) << endl;
+    cout << endl;
+    calculateAverages(gymMembers, 5);
+    cout << "+-------------------------------------+";
+
+    return 0;
+}
+
+float calculateHighestWeight(Member members[], int size) {
     float highestWeight = members[0].getWeight();
 
     for (int i = 1; i < size; i++) {
@@ -70,20 +268,44 @@ void calculateHighestWeight(Member members[], int size) {
         }
     }
 
-    cout << setw(30) << left << "Highest weight: " << right << highestWeight << " kg" << endl;
+    return highestWeight;
 }
 
-void calculateLowestWeight(Member members[], int size) {
-    // Similar to calculateHighestWeight()
+float calculateLowestWeight(Member members[], int size) {
+    float lowestWeight = members[0].getWeight();
+
+    for (int i = 1; i < size; i++) {
+        if (members[i].getWeight() < lowestWeight) {
+            lowestWeight = members[i].getWeight();
+        }
+    }
+
+    return lowestWeight;
 }
 
-void calculateHighestBMI(Member members[], int size) {
-    // Similar to calculateHighestWeight()
-}   
+float calculateHighestBMI(Member members[], int size) {
+    float highestBMI = members[0].getBMI();
 
-void calculateLowestBMI(Member members[], int size) {
-    // Similar to calculateHighestWeight()
-}   
+    for (int i = 1; i < size; i++) {
+        if (members[i].getBMI() > highestBMI) {
+            highestBMI = members[i].getBMI();
+        }
+    }
+
+    return highestBMI;
+}
+
+float calculateLowestBMI(Member members[], int size) {
+    float lowestBMI = members[0].getBMI();
+
+    for (int i = 1; i < size; i++) {
+        if (members[i].getBMI() < lowestBMI) {
+            lowestBMI = members[i].getBMI();
+        }
+    }
+
+    return lowestBMI;
+}
 
 void calculateAverages(Member members[], int size) {
     float totalWeight = 0;
@@ -96,11 +318,8 @@ void calculateAverages(Member members[], int size) {
         totalBMI += members[i].getBMI();
     }
 
+    cout << fixed << setprecision(1);
     cout << setw(30) << left << "Average weight: " << right << totalWeight / size << " kg" << endl;
-    cout << setw(30) << left << "Average height: " << right << totalHeight / size << " cm" << endl; 
-    cout << setw(30) << left << "Average BMI: " << right << totalBMI / size << endl;
-}
-
-int main() {
-    // Similar to Question 1
+    cout << setw(30) << left << "Average height: " << right << totalHeight / size << " cm" << endl;
+    cout << setprecision(2) << setw(30) << left << "Average BMI: " << right << totalBMI / size << endl;
 }

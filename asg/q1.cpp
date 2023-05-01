@@ -53,16 +53,14 @@ User-defined functions:
 
 
 Output formatting:
-    Highest weight:     90 kg
-    Lowest weight:      65 kg
-    Highest BMI:        29.4
-    Lowest BMI:         23.9
+    Highest weight:               90 kg
+    Lowest weight:                65 kg
+    Highest BMI:                  29.4
+    Lowest BMI:                   23.9
 
-    Average weight:     79.0 kg
-    Average height:     175.0 cm
-    Average BMI:        25.16
-
-Note: These are just examples of functions, the actual implementation and the number of functions can vary based on the requirements of the scenario.
+    Average weight:               79.0 kg
+    Average height:               175.0 cm
+    Average BMI:                  25.75
 */
 
 #include <iostream>
@@ -168,10 +166,9 @@ void calculateAverages(Member members[], int size) {
         totalBMI += members[i].bmi;
     }
 
-    cout << fixed << setprecision(0);
+    cout << fixed << setprecision(1);
     cout << setw(30) << left << "Average weight: " << right << totalWeight / size << " kg" << endl;
     cout << setw(30) << left << "Average height: " << right << totalHeight / size << " cm" << endl;
-    cout << fixed << setprecision(2);
-    cout << setw(30) << left << "Average BMI: " << right << totalBMI / size << endl;
+    cout << setprecision(2) << setw(30) << left << "Average BMI: " << right << totalBMI / size << endl;
 }
 
