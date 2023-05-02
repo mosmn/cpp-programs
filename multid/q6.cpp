@@ -18,49 +18,27 @@ using namespace std;
 
 int main(){
     int attendance[TRAINEES][DAYS] = {
-        {1,1,1,1,0,0,1,1,1,1},
-        {1,0,1,1,1,1,1,1,0,0},
         {1,1,1,1,1,1,1,1,1,1},
+        {1,0,1,1,1,1,1,1,0,0},
+        {1,1,1,1,0,1,1,1,1,1},
         {0,1,1,1,1,1,0,1,1,0},
-        {1,1,0,1,1,1,0,1,1,1},
+        {1,1,1,1,1,1,1,1,1,0},
     };
 
-    int trainee1 = 0, trainee2 = 0, trainee3 = 0, trainee4 = 0, trainee5 = 0;
+    int totalAttendance[TRAINEES] = {0};
+    int highestAttendance = 1;
 
     for(int i = 0; i < TRAINEES; i++){
         for(int j = 0; j < DAYS; j++){
-            if(attendance[i][j] == 1){
-                if(i == 0)
-                trainee1++;
-                if(i == 1)
-                trainee2++;
-                if(i == 2)
-                trainee3++;
-                if(i == 3)
-                trainee4++;
-                if(i == 4)
-                trainee5++;
-            }
+            totalAttendance[i] += attendance[i][j];
+        }
+        cout << "Trainee " << i+1 << " has " << totalAttendance[i] << " attendances." << endl;
+        if(totalAttendance[highestAttendance] < totalAttendance[i]){
+            highestAttendance = i;
         }
     }
 
-    int highest = trainee1;
-    if (trainee2 > highest)
-        highest = trainee2;
-    if (trainee3 > highest)
-        highest = trainee3;
-    if (trainee4 > highest)
-        highest = trainee4;
-    if (trainee4 > highest)
-        highest = trainee4;
-    if (trainee5 > highest)
-        highest = trainee5;
-    
+    cout << endl << "Trainee with the highest number of attendances is Trainee " << highestAttendance+1 << "." << endl;
 
-    cout << "Trainee 1 attendence: "<< trainee1 << endl;
-    cout << "Trainee 2 attendence: "<< trainee2 << endl;
-    cout << "Trainee 3 attendence: "<< trainee3 << endl;
-    cout << "Trainee 4 attendence: "<< trainee4 << endl;
-    cout << "Trainee 5 attendence: "<< trainee5 << endl << endl;
-    cout <<"highest: "<< highest;
+    return 0;
 }

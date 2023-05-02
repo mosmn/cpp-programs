@@ -126,7 +126,7 @@ void assignCourseToStudent(Student students[], int numStudents, Course courses[]
 
     for (int i = 0; i < numStudents; i++) {
         if (students[i].id == id) {
-            if (students[i].courseIndex != -1) {
+            if (!(students[i].courseIndex)) {
                 cout << "Student has already taken a course" << endl;
                 return;
             }
@@ -160,8 +160,16 @@ int main() {
     int choice;
     do {
         displayMenu();
-        cin >> choice;
-        cin.ignore();
+
+    if (!(cin >> choice)) {
+        // Input failed. Clear the failbit flag and ignore the remaining characters.
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Invalid choice." << endl;
+        continue;
+    }
+
+    cin.ignore();
 
         switch (choice) {
             case 1:

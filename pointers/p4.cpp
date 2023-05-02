@@ -18,14 +18,23 @@ Reversed array: 5 4 3 2 1
 
 #include <iostream>
 using namespace std;
+// void reverseArray(int** array, int size){
+//     int* temp = new int[size];
+//     for(int i = 0; i < size; i++){
+//         temp[i] = (*array)[size - i - 1];
+//     }
+//     delete[] *array;
+//     *array = temp;
+//     size = size;
+// }
+
 void reverseArray(int** array, int size){
     int* temp = new int[size];
-    for(int i = 0; i < size; i++){
-        temp[i] = (*array)[size - i - 1];
+    for(int i = size - 1, j = 0; i >= 0; i--, j++){
+        temp[j] = *(*array + i);
     }
     delete[] *array;
     *array = temp;
-    size = size;
 }
 
 int main(){
@@ -34,7 +43,7 @@ int main(){
     for(int i = 0; i < size; i++){
         array[i] = i + 1;
     }
-    cout << "Original array: ";
+    cout << "Original array: "; 
     for(int i = 0; i < size; i++){
         cout << array[i] << " ";
     }
