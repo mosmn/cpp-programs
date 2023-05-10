@@ -33,5 +33,6 @@ int main()
         info << name << ", " << id << endl;
         info.close();
     }
+    
     return 0;
 }

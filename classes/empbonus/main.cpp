@@ -22,13 +22,14 @@ int main()
         cin>> sales;
         cout << endl;
         if (status == 1)
-            list[i] = new fullTime(name, ID, "Full Time", sales);
+            list[i] = new fullTime(name, ID, "Full Time", sales);// instantiation of an object
         else
-            list[i] = new partTime(name, ID, "Part Time", sales);
+            list[i] = new partTime(name, ID, "Part Time", sales);// instantiation of an object
     }
     for (i=0; i<num; i++) {
         list[i] -> display();
         cout << endl;
     }
+
     return 0;
 }
