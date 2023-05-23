@@ -10,7 +10,8 @@ int main()
     int num, i;
     cout<<"How many employees?: ";
     cin >> num;
-    salesPerson *list [num];
+    salesPerson *list [num];// variable length array
+    // using dynamic memory allocation: salesPerson *list = new salesPerson [num];
     for (i=0; i<num; i++) {
         cout<<"Name?: ";
         cin>> name;
