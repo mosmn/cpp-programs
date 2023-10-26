@@ -1,25 +1,43 @@
 #include <iostream>
-#include <iomanip>
-
+#include <list>
 using namespace std;
 
-double GetWeeklyHours (void) {
-    double h = 46.50;
-    return h;
+// i
+void display(list<string> &lst)
+{
+    //ii
+    list<string>::iterator it;
+    for (it = lst.begin(); it != lst.end(); it++)
+    {
+        cout << *it << " ";
+    }
 }
 
-double GetSalary(void) {
-    double salary = 26.48;
-    return salary;
-}
+int main()
+{
+    string BCS[] = {"BCS(SE)", "BCS(CS)", "BCS(SN)"};
+    list<string> CCI;
+    list<string> Other;
 
-int main(){
-    double hours, salary, WeeklySalary;
-    hours = GetWeeklyHours();
-    salary = GetSalary();
-    cout << "Weekly Hours: " << hours << '\n';
-    cout<<"Hourly Salary: " << salary << '\n';
-    WeeklySalary = hours * salary;
-    cout << "Weekly Salary: " << WeeklySalary << '\n';
+    CCI = {"BIT(IS)", "BIT(GM)"};
+    cout<<"CCI Program: ";
+    display(CCI);
+
+    // cout << "\nOther Program: ";
+    // display(Other);
+
+    // cout << "\nCCI Program: ";
+    // display(CCI);
+
+    // cout << "\nOther Program: ";
+    // display(Other);
+
+    // cout << "\nCCI Program: ";
+    // display(CCI);
+
+    // cout << "\nTotal CCI Program: " << CCI.size();
+
+    // cout << "\nThe end";
+
     return 0;
 }
