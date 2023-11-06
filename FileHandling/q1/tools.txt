@@ -1,5 +1,0 @@
-1001 Jig saw 21 11.00
-1002 Lawn mover 3 79.50
-1003 Screwdriver 18 99.99
-1004 Sledge hammer 106 6.99
-1005 Wrench 11 21.50
