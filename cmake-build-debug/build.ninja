@@ -49,11 +49,11 @@ cmake_ninja_workdir = /Users/mohaosman/CLionProjects/cpp-programs/cmake-build-de
 
 build cmake_object_order_depends_target_cpp-programs: phony || CMakeFiles/cpp-programs.dir
 
-build CMakeFiles/cpp-programs.dir/test1.cpp.o: CXX_COMPILER__cpp-programs_unscanned_Debug /Users/mohaosman/CLionProjects/cpp-programs/test1.cpp || cmake_object_order_depends_target_cpp-programs
-  DEP_FILE = CMakeFiles/cpp-programs.dir/test1.cpp.o.d
+build CMakeFiles/cpp-programs.dir/dsa/linkedlist/q4.cpp.o: CXX_COMPILER__cpp-programs_unscanned_Debug /Users/mohaosman/CLionProjects/cpp-programs/dsa/linkedlist/q4.cpp || cmake_object_order_depends_target_cpp-programs
+  DEP_FILE = CMakeFiles/cpp-programs.dir/dsa/linkedlist/q4.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/cpp-programs.dir
-  OBJECT_FILE_DIR = CMakeFiles/cpp-programs.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp-programs.dir/dsa/linkedlist
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/cpp-programs.dir/test1.cpp.o: CXX_COMPILER__cpp-programs_unscan
 #############################################
 # Link the executable cpp-programs
 
-build cpp-programs: CXX_EXECUTABLE_LINKER__cpp-programs_Debug CMakeFiles/cpp-programs.dir/test1.cpp.o
+build cpp-programs: CXX_EXECUTABLE_LINKER__cpp-programs_Debug CMakeFiles/cpp-programs.dir/dsa/linkedlist/q4.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/cpp-programs.dir
   POST_BUILD = :
