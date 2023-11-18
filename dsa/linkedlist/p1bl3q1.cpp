@@ -89,7 +89,8 @@ void deleteNode(Grade **h) {
             p = p->next;
         }
         p->prev->next = p->next;
-        p->next->prev = p->prev;
+        if(p->next != NULL)
+            p->next->prev = p->prev;
         free(p);
     }
 }
