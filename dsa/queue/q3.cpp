@@ -62,13 +62,13 @@ int main() {
 
     insert(staff, name, salary, service, 6); 
 
-    cout<<"\n # Menu : Current Record # "<<endl; 
+    cout<<"\n # Menu : Current Record # "<<endl <<  "List of Employee"<<endl << "----------------"<<endl;
     display(staff); 
 
     cout<<"\n # Menu : Update Record # "<<endl; 
     update(staff); 
 
-    cout<<"\n # Menu : Updated Record # "<<endl; 
+    cout<<"\n # Menu : Updated Record # "<<endl <<  "List of Employee"<<endl << "----------------"<<endl;
     display(staff);      
 
     cout<<"\nEnd of program"; 
