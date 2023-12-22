@@ -7,7 +7,7 @@ struct Data{
 
     Data *next; 
 
-}; 
+};
 
  
 
@@ -37,36 +37,15 @@ void enqueue(Data **head, Data **tail, int val){
 
 }
 
-     
-
 void analysis(Data *head){
-    // Data *temp = head;
-    // int totalEven = 0, totalOdd = 0;
-
-    // for(int i = 1; temp != NULL; i++){ 
-    //     if(temp->no % 2 == 0){
-    //         cout<<"Value "<< i <<": "<<temp->no<<" (Even)"<<endl;
-    //         totalEven++;
-    //     }else{
-    //         cout<<"Value "<< i <<": "<<temp->no<< "(Odd)"<<endl;
-    //         totalOdd++;
-    //     }
-    //     temp = temp->next;
-    // }
-
-    // cout<<"Total even numbers: "<<totalEven<<endl;
-    // cout<<"Total odd numbers: "<<totalOdd<<endl;
-
     Data *tempListh = NULL;
     Data *tempListt = NULL;
 
     Data *temph = head;
-    while(head != NULL){
-        if(temph != NULL){
-            enqueue(&tempListh, &tempListt, temph->no);
-            temph = temph->next;
-        }
-    } 
+    while(temph != NULL){
+        enqueue(&tempListh, &tempListt, temph->no);
+        temph = temph->next;
+    }
 
     int totalEven = 0, totalOdd = 0;
     Data *temp = tempListh;
@@ -132,7 +111,7 @@ int main() {
     cout<< endl<<":: Analysis ::"<< endl;
     analysis(head);
 
-    cout<<"Remove all elements from the stack: "<< endl;
+    cout<<"\nRemove all elements from the stack: "<< endl;
     dequeue(&head);    
 
     cout<<"\nEnd of program"; 
